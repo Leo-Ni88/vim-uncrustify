@@ -59,6 +59,8 @@ func! Uncrustify(...)
       let l:cfgfile = l:cwdcfg
     elseif filereadable(l:homecfg)
       let l:cfgfile = l:homecfg
+    else
+      let l:cfgfile = l:homecfg
     endif
   else
     let l:cfgfile = g:uncrustify_cfg_file_path
